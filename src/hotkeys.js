@@ -618,7 +618,7 @@
         });
 
         // remove the hotkey if the directive is destroyed:
-        el.bind('$destroy', function() {
+        scope.$on('$destroy', function() {
           angular.forEach(keys, hotkeys.del);
         });
       }
